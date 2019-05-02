@@ -1,5 +1,5 @@
 class PetSerializer < ActiveModel::Serializer
-  attributes :name, :sex, :animal, :age, :location, :allergy, :size, :img_url, :guardian, :meetings
+  attributes :id, :name, :sex, :animal, :age, :location, :allergy, :size, :img_url, :guardian, :meetings
 
 
   def guardian
