@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2019_05_01_213641) do
     t.string "residence_type"
     t.boolean "allergy"
     t.boolean "pet"
+    t.string "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -29,12 +30,13 @@ ActiveRecord::Schema.define(version: 2019_05_01_213641) do
   create_table "guardians", force: :cascade do |t|
     t.string "name"
     t.string "location"
+    t.string "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "meetings", force: :cascade do |t|
-    t.integer "user_id"
+    t.integer "adopter_id"
     t.integer "pet_id"
     t.datetime "datetime"
     t.string "location"
@@ -51,6 +53,7 @@ ActiveRecord::Schema.define(version: 2019_05_01_213641) do
     t.string "location"
     t.boolean "allergy"
     t.string "size"
+    t.string "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

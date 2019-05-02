@@ -1,7 +1,7 @@
 class CreateMeetings < ActiveRecord::Migration[5.2]
   def change
     create_table :meetings do |t|
-      t.integer :user_id
+      t.integer :adopter_id
       t.integer :pet_id
       t.datetime :datetime
       t.string :location

@@ -1,0 +1,17 @@
+class PetSerializer < ActiveModel::Serializer
+  attributes :name, :sex, :animal, :age, :location, :allergy, :size, :img_url, :guardian, :meetings
+
+
+  def guardian
+    {name: self.object.guardian.name,
+    location: self.object.guardian.location}
+  end
+
+  def meetings
+    self.object.meetings.map do |meeting|
+      {adopter: meeting.adopter.name,
+       date: meeting.datetime,
+       location: meeting.location}
+     end
+  end
+end
