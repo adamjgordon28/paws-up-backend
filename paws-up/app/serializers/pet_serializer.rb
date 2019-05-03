@@ -4,7 +4,9 @@ class PetSerializer < ActiveModel::Serializer
 
   def guardian
     {name: self.object.guardian.name,
-    location: self.object.guardian.location}
+    location: self.object.guardian.location,
+    img_url: self.object.guardian.img_url
+    }
   end
 
   def meetings
