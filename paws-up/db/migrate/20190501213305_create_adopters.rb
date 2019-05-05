@@ -6,7 +6,7 @@ class CreateAdopters < ActiveRecord::Migration[5.2]
       t.string :location
       t.string :residence_type
       t.boolean :allergy
-      t.boolean :pet
+      t.boolean :other_pets
       t.string :img_url
       t.timestamps
     end

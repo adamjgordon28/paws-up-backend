@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2019_05_01_213641) do
     t.string "location"
     t.string "residence_type"
     t.boolean "allergy"
-    t.boolean "pet"
+    t.boolean "other_pets"
     t.string "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
