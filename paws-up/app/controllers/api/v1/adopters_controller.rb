@@ -29,7 +29,7 @@ class Api::V1::AdoptersController < ApplicationController
   private
 
   def adopter_params
-    params.permit(:id, :name, :sex, :age, :location, :residence_type, :allergy, :pets, :img_url)
+    params.permit(:id, :name, :sex, :age, :location, :residence_type, :allergy, :other_pets, :img_url)
   end
 
 end
