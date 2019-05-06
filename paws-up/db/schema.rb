@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_01_213641) do
+ActiveRecord::Schema.define(version: 2019_05_01_213636) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,14 +22,6 @@ ActiveRecord::Schema.define(version: 2019_05_01_213641) do
     t.string "residence_type"
     t.boolean "allergy"
     t.boolean "other_pets"
-    t.string "img_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "guardians", force: :cascade do |t|
-    t.string "name"
-    t.string "location"
     t.string "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -47,7 +39,6 @@ ActiveRecord::Schema.define(version: 2019_05_01_213641) do
   create_table "pets", force: :cascade do |t|
     t.string "name"
     t.string "sex"
-    t.integer "guardian_id"
     t.string "animal"
     t.integer "age"
     t.string "location"
