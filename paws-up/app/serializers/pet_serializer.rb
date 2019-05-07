@@ -4,9 +4,11 @@ class PetSerializer < ActiveModel::Serializer
 
   def meetings
     self.object.meetings.map do |meeting|
-      {adopter: meeting.adopter.name,
-       date: meeting.datetime,
-       location: meeting.location}
+      {adopter_id: meeting.adopter.id,
+       adopter: meeting.adopter.name,
+       date: meeting.datetime.strftime("%e %b %Y"),
+       location: meeting.location,
+      adopter_img_url: meeting.adopter.img_url}
      end
   end
 end
