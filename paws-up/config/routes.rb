@@ -4,7 +4,6 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :pets
       resources :adopters
-      resources :meetings
     end
   end
 end

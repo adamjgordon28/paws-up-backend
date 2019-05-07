@@ -1,4 +1,7 @@
 class Api::V1::AdoptersController < ApplicationController
+
+
+
   def index
     @adopters= Adopter.all
     render json: @adopters
@@ -10,7 +13,7 @@ class Api::V1::AdoptersController < ApplicationController
   end
 
   def create
-    @adopter = Adopter.find_or_create_by(adopter_params)
+    @adopter = Adopter.create(adopter_params)
     render json: @adopter
   end
 
@@ -29,7 +32,7 @@ class Api::V1::AdoptersController < ApplicationController
   private
 
   def adopter_params
-    params.permit(:id, :name, :sex, :age, :location, :residence_type, :allergy, :other_pets, :img_url)
+    params.permit(:id, :name, :age, :location, :residence_type, :allergy, :other_pets, :img_url)
   end
 
 end
