@@ -1,16 +1,16 @@
-Adopter.create(name: "Nicky", age: 27, location: "New York City", residence_type: "Apt", allergy: false, other_pets: true, img_url: "https://media.licdn.com/dms/image/C4D03AQGa0yq77D29og/profile-displayphoto-shrink_800_800/0?e=1562198400&v=beta&t=-r01afowD-gP2wPUgrObwb2Dxi97-wizVLMBRqGvQ0c")
+# Adopter.create(name: "Nicky", age: 27, location: "New York City", residence_type: "Apt", allergy: false, other_pets: true, img_url: "https://media.licdn.com/dms/image/C4D03AQGa0yq77D29og/profile-displayphoto-shrink_800_800/0?e=1562198400&v=beta&t=-r01afowD-gP2wPUgrObwb2Dxi97-wizVLMBRqGvQ0c")
+#
+#
+# Adopter.create(name: "Ryan", age: 52, location: "New York City", residence_type: "Apt", allergy: false, other_pets: true, img_url: "https://d3ewd3ysu1dfsj.cloudfront.net/images/stories/large/40323.jpg?1507654168")
+#
+#
+# Adopter.create(name: "Matthew", age:30, location: "Boston", residence_type: "Apt", allergy: false, other_pets: true, img_url: "https://m.media-amazon.com/images/M/MV5BMTg0MDc3ODUwOV5BMl5BanBnXkFtZTcwMTk2NjY4Nw@@._V1_.jpg")
+#
+#
+# Adopter.create(name: "Khaled", age: 35, location: "Chicago", residence_type: "Apt", allergy: false, other_pets: true, img_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Khalid-MTV_smiling.jpg/220px-Khalid-MTV_smiling.jpg")
 
 
-Adopter.create(name: "Ryan", age: 52, location: "New York City", residence_type: "Apt", allergy: false, other_pets: true, img_url: "https://d3ewd3ysu1dfsj.cloudfront.net/images/stories/large/40323.jpg?1507654168")
-
-
-Adopter.create(name: "Matthew", age:30, location: "Boston", residence_type: "Apt", allergy: false, other_pets: true, img_url: "https://m.media-amazon.com/images/M/MV5BMTg0MDc3ODUwOV5BMl5BanBnXkFtZTcwMTk2NjY4Nw@@._V1_.jpg")
-
-
-Adopter.create(name: "Khaled", age: 35, location: "Chicago", residence_type: "Apt", allergy: false, other_pets: true, img_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Khalid-MTV_smiling.jpg/220px-Khalid-MTV_smiling.jpg")
-
-
-Adopter.create(name: "Suni", age: 23, location: "Boston", residence_type: "Apt", allergy: false, other_pets: true, img_url: "https://ksassets.timeincuk.net/wp/uploads/sites/55/2016/10/ReyDaisyRidleyStarWars.jpg")
+# Adopter.create(name: "Suni", age: 23, location: "Boston", residence_type: "Apt", allergy: false, other_pets: true, img_url: "https://ksassets.timeincuk.net/wp/uploads/sites/55/2016/10/ReyDaisyRidleyStarWars.jpg")
 
 
 

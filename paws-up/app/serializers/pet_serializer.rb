@@ -11,4 +11,8 @@ class PetSerializer < ActiveModel::Serializer
       adopter_img_url: meeting.adopter.img_url}
      end
   end
+
+
+
+
 end

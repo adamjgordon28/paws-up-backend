@@ -1,5 +1,5 @@
 class AdopterSerializer < ActiveModel::Serializer
-attributes :id, :name, :age, :location, :allergy, :img_url, :meetings, :residence_type, :other_pets
+attributes :id, :name, :username, :age, :location, :allergy, :img_url, :meetings, :residence_type, :other_pets
 
 
   def meetings
