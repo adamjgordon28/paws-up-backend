@@ -11,7 +11,11 @@ class Api::V1::MeetingsController < ApplicationController
 
   def create
     @meeting = Meeting.find_or_create_by(meeting_params)
+    if @meeting.valid?
     render json: @meeting
+    else
+    render json: {errors: "Meeting cannot be in the past."}
+    end
   end
 
   def update
