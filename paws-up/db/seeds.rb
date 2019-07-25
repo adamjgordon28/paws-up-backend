@@ -10,7 +10,7 @@
 # Adopter.create(name: "Khaled", age: 35, location: "Chicago", residence_type: "Apt", allergy: false, other_pets: true, img_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Khalid-MTV_smiling.jpg/220px-Khalid-MTV_smiling.jpg")
 
 
-# Adopter.create(name: "Suni", age: 23, location: "Boston", residence_type: "Apt", allergy: false, other_pets: true, img_url: "https://ksassets.timeincuk.net/wp/uploads/sites/55/2016/10/ReyDaisyRidleyStarWars.jpg")
+Adopter.create(name: "kate", username: "kate", password:"kate", age: 23, location: "Boston", residence_type: "Apt", allergy: false, other_pets: true, img_url: "https://ksassets.timeincuk.net/wp/uploads/sites/55/2016/10/ReyDaisyRidleyStarWars.jpg")
 
 
 

@@ -1,24 +1,22 @@
+
 class Api::V1::AuthController < ApplicationController
+  skip_before_action :authorized, only: [:login]
 
   def login
-    user = Adopter.find_by(username: params[:username].downcase)
+    adopter = Adopter.find_by(username: adopter_login_params[:username])
+    if adopter && adopter.authenticate(adopter_login_params[:password])
+       token = encode_token({ adopter_id: adopter.id })
 
-    if user && user.authenticate(params[:password])
-      token = encode_token(user.id)
-
-      # render json: user
-      render json: {user: AdopterSerializer.new(user), token: token}
+       render json: { adopter: AdopterSerializer.new(adopter), jwt: token }, status: :accepted
     else
-      render json: {errors: "Could not find this username matched with this password. Please try again."}
+      render json: { message: 'Invalid username or password' }, status: :unauthorized
     end
   end
 
-  def auto_login
-    if curr_user
-      render json: curr_user
-    else
-      render json: {errors: "Could not log in"}
-    end
+  private
+
+  def adopter_login_params
+    params.require(:adopter).permit(:username, :password)
   end
 
 end
