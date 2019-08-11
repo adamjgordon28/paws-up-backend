@@ -1,4 +1,6 @@
 class Api::V1::MeetingsController < ApplicationController
+  skip_before_action :authorized, only: [:create]
+
   def index
     @meetings= Meeting.all
     render json: @meetings
