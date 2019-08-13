@@ -4,7 +4,8 @@ attributes :id, :name, :username, :age, :location, :allergy, :img_url, :meetings
 
   def meetings
     self.object.meetings.map do |meeting|
-      {pet_id: meeting.pet.id,
+      {id: meeting.id,
+       pet_id: meeting.pet.id,
        pet: meeting.pet.name,
        date: meeting.datetime.strftime("%e %b %Y"),
        location: meeting.location,
