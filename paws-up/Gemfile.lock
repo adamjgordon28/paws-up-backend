@@ -51,6 +51,7 @@ GEM
       sshkit (>= 1.6.1, != 1.7.0)
     arel (9.0.0)
     bcrypt (3.1.12)
+    bcrypt_pbkdf (1.0.1)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
     builder (3.2.3)
@@ -74,6 +75,7 @@ GEM
       activesupport
     concurrent-ruby (1.1.5)
     crass (1.0.4)
+    ed25519 (1.2.4)
     erubi (1.8.0)
     ffi (1.10.0)
     globalid (0.4.2)
@@ -169,12 +171,14 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers (~> 0.10.0)
   bcrypt (~> 3.1.7)
+  bcrypt_pbkdf (~> 1.0, >= 1.0.1)
   bootsnap (>= 1.1.0)
   byebug
   capistrano (~> 3.11)
   capistrano-passenger (~> 0.2.0)
   capistrano-rails (~> 1.4)
   capistrano-rbenv (~> 2.1, >= 2.1.4)
+  ed25519 (~> 1.2, >= 1.2.4)
   jwt
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
