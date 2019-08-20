@@ -11,8 +11,24 @@ set :repo_url, "git@github.com:adamjgordon28/paws-up-backend.git"
 set :deploy_to, "/home/deploy/pawsup_backend"
 
 
-append :linked_files, "config/database.yml", "config/secrets.yml"
+append :linked_files, "config/database.yml"
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
+
+
+namespace :rails do
+  desc 'Open a rails console `cap [staging] rails:console [server_index default: 0]`'
+  task :console do
+    server = roles(:app)[ARGV[2].to_i]
+
+    puts "Opening a console on: #{server.hostname}…."
+
+    cmd = "ssh #{server.user}@#{server.hostname} -t 'cd #{fetch(:deploy_to)}/current && RAILS_ENV=#{fetch(:rails_env)} bundle exec rails console'"
+
+    puts cmd
+
+    exec cmd
+  end
+end
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
