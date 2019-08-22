@@ -19,6 +19,8 @@ gem 'puma', '~> 3.11'
 gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'
 
+gem 'nokogiri', '~> 1.10', '>= 1.10.4'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
