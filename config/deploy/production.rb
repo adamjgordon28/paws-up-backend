@@ -1,6 +1,8 @@
 set :stage, :production
 server '167.71.252.10', user: 'deploy', roles: %w{app db web}
 
+set :passenger_restart_with_touch, true
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
