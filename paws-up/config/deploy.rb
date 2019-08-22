@@ -11,7 +11,7 @@ set :repo_url, "git@github.com:adamjgordon28/paws-up-backend.git"
 set :deploy_to, "/home/deploy/pawsup_backend"
 
 
-append :linked_files, "config/database.yml"
+append :linked_files, "config/database.yml", "config/secrets.yml"
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
 
 
