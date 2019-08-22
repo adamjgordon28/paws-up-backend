@@ -1,0 +1,106 @@
+Started GET "/api/v1/adopters" for ::1 at 2019-08-22 00:22:38 -0400
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::AdoptersController#index as HTML
+  [1m[36mAdopter Load (2.7ms)[0m  [1m[34mSELECT "adopters".* FROM "adopters"[0m
+  ↳ app/controllers/api/v1/adopters_controller.rb:7
+[active_model_serializers]   [1m[36mMeeting Load (7.9ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."adopter_id" = $1[0m  [["adopter_id", 29]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:6
+[active_model_serializers]   [1m[36mMeeting Load (0.6ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."adopter_id" = $1[0m  [["adopter_id", 22]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:6
+[active_model_serializers]   [1m[36mPet Load (0.7ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (0.7ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (1.1ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (1.2ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (2.1ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mMeeting Load (0.6ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."adopter_id" = $1[0m  [["adopter_id", 23]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:6
+[active_model_serializers]   [1m[36mMeeting Load (0.5ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."adopter_id" = $1[0m  [["adopter_id", 24]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:6
+[active_model_serializers]   [1m[36mMeeting Load (0.4ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."adopter_id" = $1[0m  [["adopter_id", 25]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:6
+[active_model_serializers]   [1m[36mMeeting Load (0.4ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."adopter_id" = $1[0m  [["adopter_id", 26]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:6
+[active_model_serializers]   [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mMeeting Load (0.3ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."adopter_id" = $1[0m  [["adopter_id", 27]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:6
+[active_model_serializers]   [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers]   [1m[36mMeeting Load (0.3ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."adopter_id" = $1[0m  [["adopter_id", 28]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:6
+[active_model_serializers]   [1m[36mCACHE Pet Load (0.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/adopter_serializer.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (230.98ms)
+Completed 200 OK in 296ms (Views: 220.5ms | ActiveRecord: 63.1ms)
+
+
