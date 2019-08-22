@@ -1,0 +1,486 @@
+# Logfile created on 2019-08-21 23:31:43 -0400 by logger.rb/66358
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-08-21 23:31:43 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [daa7f049] Running [ -d $HOME/.rbenv/versions/2.6.3 ] as deploy@167.71.252.10
+ DEBUG [daa7f049] Command: [ -d $HOME/.rbenv/versions/2.6.3 ]
+ DEBUG [daa7f049] Finished in 0.637 seconds with exit status 0 (successful).
+ DEBUG [94618e54] Running /usr/bin/env which passenger as deploy@167.71.252.10
+ DEBUG [94618e54] Command: /usr/bin/env which passenger
+ DEBUG [94618e54] 	/usr/bin/passenger
+ DEBUG [94618e54] Finished in 0.100 seconds with exit status 0 (successful).
+  INFO [153414b5] Running /usr/bin/env mkdir -p /tmp as deploy@167.71.252.10
+ DEBUG [153414b5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env mkdir -p /tmp )
+  INFO [153414b5] Finished in 0.102 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-pawsup_backend-production-flatironschool.sh 0.0%
+  INFO Uploading /tmp/git-ssh-pawsup_backend-production-flatironschool.sh 100.0%
+  INFO [b37b1a2c] Running /usr/bin/env chmod 700 /tmp/git-ssh-pawsup_backend-production-flatironschool.sh as deploy@167.71.252.10
+ DEBUG [b37b1a2c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env chmod 700 /tmp/git-ssh-pawsup_backend-production-flatironschool.sh )
+  INFO [b37b1a2c] Finished in 0.089 seconds with exit status 0 (successful).
+  INFO [8226e6b1] Running /usr/bin/env git ls-remote git@github.com:adamjgordon28/paws-up-backend.git HEAD as deploy@167.71.252.10
+ DEBUG [8226e6b1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pawsup_backend-production-flatironschool.sh" ; /usr/bin/env git ls-remote git@github.com:adamjgordon28/paws-up-backend.git HEAD )
+ DEBUG [8226e6b1] 	Warning: Permanently added the RSA host key for IP address '192.30.253.113' to the list of known hosts.
+ DEBUG [8226e6b1] 	2af3a4e9a8c23132478ee39461f7ed9d37115f70	HEAD
+  INFO [8226e6b1] Finished in 0.451 seconds with exit status 0 (successful).
+  INFO [b27935bc] Running /usr/bin/env mkdir -p /home/deploy/pawsup_backend/shared /home/deploy/pawsup_backend/releases as deploy@167.71.252.10
+ DEBUG [b27935bc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env mkdir -p /home/deploy/pawsup_backend/shared /home/deploy/pawsup_backend/releases )
+  INFO [b27935bc] Finished in 0.075 seconds with exit status 0 (successful).
+  INFO [723ac59a] Running /usr/bin/env mkdir -p /home/deploy/pawsup_backend/shared/log /home/deploy/pawsup_backend/shared/tmp/pids /home/deploy/pawsup_backend/shared/tmp/cache /home/deploy/pawsup_backend/shared/tmp/sockets /home/deploy/pawsup_backend/shared/vendor/bundle /home/deploy/pawsup_backend/shared/public/system /home/deploy/pawsup_backend/shared/public/uploads /home/deploy/pawsup_backend/shared/public/assets as deploy@167.71.252.10
+ DEBUG [723ac59a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env mkdir -p /home/deploy/pawsup_backend/shared/log /home/deploy/pawsup_backend/shared/tmp/pids /home/deploy/pawsup_backend/shared/tmp/cache /home/deploy/pawsup_backend/shared/tmp/sockets /home/deploy/pawsup_backend/shared/vendor/bundle /home/deploy/pawsup_backend/shared/public/system /home/deploy/pawsup_backend/shared/public/uploads /home/deploy/pawsup_backend/shared/public/assets )
+  INFO [723ac59a] Finished in 0.084 seconds with exit status 0 (successful).
+  INFO [9f539738] Running /usr/bin/env mkdir -p /home/deploy/pawsup_backend/shared/config as deploy@167.71.252.10
+ DEBUG [9f539738] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env mkdir -p /home/deploy/pawsup_backend/shared/config )
+  INFO [9f539738] Finished in 0.094 seconds with exit status 0 (successful).
+ DEBUG [d1c2ba0c] Running [ -f /home/deploy/pawsup_backend/shared/config/database.yml ] as deploy@167.71.252.10
+ DEBUG [d1c2ba0c] Command: [ -f /home/deploy/pawsup_backend/shared/config/database.yml ]
+ DEBUG [d1c2ba0c] Finished in 0.094 seconds with exit status 0 (successful).
+ DEBUG [829b8493] Running [ -f /home/deploy/pawsup_backend/shared/config/secrets.yml ] as deploy@167.71.252.10
+ DEBUG [829b8493] Command: [ -f /home/deploy/pawsup_backend/shared/config/secrets.yml ]
+ DEBUG [829b8493] Finished in 0.097 seconds with exit status 0 (successful).
+ DEBUG [7baa1ddc] Running [ -f /home/deploy/pawsup_backend/current/REVISION ] as deploy@167.71.252.10
+ DEBUG [7baa1ddc] Command: [ -f /home/deploy/pawsup_backend/current/REVISION ]
+ DEBUG [7baa1ddc] Finished in 0.092 seconds with exit status 1 (failed).
+ DEBUG [4f7db40b] Running [ -f /home/deploy/pawsup_backend/repo/HEAD ] as deploy@167.71.252.10
+ DEBUG [4f7db40b] Command: [ -f /home/deploy/pawsup_backend/repo/HEAD ]
+ DEBUG [4f7db40b] Finished in 0.097 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/pawsup_backend/repo
+ DEBUG [e25edb34] Running if test ! -d /home/deploy/pawsup_backend/repo; then echo "Directory does not exist '/home/deploy/pawsup_backend/repo'" 1>&2; false; fi as deploy@167.71.252.10
+ DEBUG [e25edb34] Command: if test ! -d /home/deploy/pawsup_backend/repo; then echo "Directory does not exist '/home/deploy/pawsup_backend/repo'" 1>&2; false; fi
+ DEBUG [e25edb34] Finished in 0.096 seconds with exit status 0 (successful).
+  INFO [4011c6b2] Running /usr/bin/env git remote set-url origin git@github.com:adamjgordon28/paws-up-backend.git as deploy@167.71.252.10
+ DEBUG [4011c6b2] Command: cd /home/deploy/pawsup_backend/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pawsup_backend-production-flatironschool.sh" ; /usr/bin/env git remote set-url origin git@github.com:adamjgordon28/paws-up-backend.git )
+  INFO [4011c6b2] Finished in 0.095 seconds with exit status 0 (successful).
+  INFO [09a84e1f] Running /usr/bin/env git remote update --prune as deploy@167.71.252.10
+ DEBUG [09a84e1f] Command: cd /home/deploy/pawsup_backend/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pawsup_backend-production-flatironschool.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [09a84e1f] 	Fetching origin
+ DEBUG [09a84e1f] 	From github.com:adamjgordon28/paws-up-backend
+   e2d2f7a..2af3a4e  master     -> master
+  INFO [09a84e1f] Finished in 0.456 seconds with exit status 0 (successful).
+ DEBUG [866ab5b5] Running if test ! -d /home/deploy/pawsup_backend/repo; then echo "Directory does not exist '/home/deploy/pawsup_backend/repo'" 1>&2; false; fi as deploy@167.71.252.10
+ DEBUG [866ab5b5] Command: if test ! -d /home/deploy/pawsup_backend/repo; then echo "Directory does not exist '/home/deploy/pawsup_backend/repo'" 1>&2; false; fi
+ DEBUG [866ab5b5] Finished in 0.040 seconds with exit status 0 (successful).
+  INFO [0d7ee71d] Running /usr/bin/env mkdir -p /home/deploy/pawsup_backend/releases/20190822033145 as deploy@167.71.252.10
+ DEBUG [0d7ee71d] Command: cd /home/deploy/pawsup_backend/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pawsup_backend-production-flatironschool.sh" ; /usr/bin/env mkdir -p /home/deploy/pawsup_backend/releases/20190822033145 )
+  INFO [0d7ee71d] Finished in 0.097 seconds with exit status 0 (successful).
+  INFO [5ee8f825] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/pawsup_backend/releases/20190822033145 as deploy@167.71.252.10
+ DEBUG [5ee8f825] Command: cd /home/deploy/pawsup_backend/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pawsup_backend-production-flatironschool.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/pawsup_backend/releases/20190822033145 )
+  INFO [5ee8f825] Finished in 0.104 seconds with exit status 0 (successful).
+ DEBUG [c6b43be3] Running if test ! -d /home/deploy/pawsup_backend/repo; then echo "Directory does not exist '/home/deploy/pawsup_backend/repo'" 1>&2; false; fi as deploy@167.71.252.10
+ DEBUG [c6b43be3] Command: if test ! -d /home/deploy/pawsup_backend/repo; then echo "Directory does not exist '/home/deploy/pawsup_backend/repo'" 1>&2; false; fi
+ DEBUG [c6b43be3] Finished in 0.093 seconds with exit status 0 (successful).
+ DEBUG [45d3f1e2] Running /usr/bin/env git rev-list --max-count=1 master as deploy@167.71.252.10
+ DEBUG [45d3f1e2] Command: cd /home/deploy/pawsup_backend/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pawsup_backend-production-flatironschool.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [45d3f1e2] 	2af3a4e9a8c23132478ee39461f7ed9d37115f70
+ DEBUG [45d3f1e2] Finished in 0.100 seconds with exit status 0 (successful).
+ DEBUG [5f407883] Running if test ! -d /home/deploy/pawsup_backend/releases/20190822033145; then echo "Directory does not exist '/home/deploy/pawsup_backend/releases/20190822033145'" 1>&2; false; fi as deploy@167.71.252.10
+ DEBUG [5f407883] Command: if test ! -d /home/deploy/pawsup_backend/releases/20190822033145; then echo "Directory does not exist '/home/deploy/pawsup_backend/releases/20190822033145'" 1>&2; false; fi
+ DEBUG [5f407883] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [c9926a45] Running /usr/bin/env echo "2af3a4e9a8c23132478ee39461f7ed9d37115f70" > REVISION as deploy@167.71.252.10
+ DEBUG [c9926a45] Command: cd /home/deploy/pawsup_backend/releases/20190822033145 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env echo "2af3a4e9a8c23132478ee39461f7ed9d37115f70" > REVISION )
+  INFO [c9926a45] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [ec7bd84a] Running /usr/bin/env mkdir -p /home/deploy/pawsup_backend/releases/20190822033145/config as deploy@167.71.252.10
+ DEBUG [ec7bd84a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env mkdir -p /home/deploy/pawsup_backend/releases/20190822033145/config )
+  INFO [ec7bd84a] Finished in 0.091 seconds with exit status 0 (successful).
+ DEBUG [69e3df08] Running [ -L /home/deploy/pawsup_backend/releases/20190822033145/config/database.yml ] as deploy@167.71.252.10
+ DEBUG [69e3df08] Command: [ -L /home/deploy/pawsup_backend/releases/20190822033145/config/database.yml ]
+ DEBUG [69e3df08] Finished in 0.095 seconds with exit status 1 (failed).
+ DEBUG [395bf016] Running [ -f /home/deploy/pawsup_backend/releases/20190822033145/config/database.yml ] as deploy@167.71.252.10
+ DEBUG [395bf016] Command: [ -f /home/deploy/pawsup_backend/releases/20190822033145/config/database.yml ]
+ DEBUG [395bf016] Finished in 0.093 seconds with exit status 1 (failed).
+  INFO [2220f3bf] Running /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/config/database.yml /home/deploy/pawsup_backend/releases/20190822033145/config/database.yml as deploy@167.71.252.10
+ DEBUG [2220f3bf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/config/database.yml /home/deploy/pawsup_backend/releases/20190822033145/config/database.yml )
+  INFO [2220f3bf] Finished in 0.100 seconds with exit status 0 (successful).
+ DEBUG [0644e597] Running [ -L /home/deploy/pawsup_backend/releases/20190822033145/config/secrets.yml ] as deploy@167.71.252.10
+ DEBUG [0644e597] Command: [ -L /home/deploy/pawsup_backend/releases/20190822033145/config/secrets.yml ]
+ DEBUG [0644e597] Finished in 0.102 seconds with exit status 1 (failed).
+ DEBUG [6cf8560a] Running [ -f /home/deploy/pawsup_backend/releases/20190822033145/config/secrets.yml ] as deploy@167.71.252.10
+ DEBUG [6cf8560a] Command: [ -f /home/deploy/pawsup_backend/releases/20190822033145/config/secrets.yml ]
+ DEBUG [6cf8560a] Finished in 0.095 seconds with exit status 1 (failed).
+  INFO [aeaa45c2] Running /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/config/secrets.yml /home/deploy/pawsup_backend/releases/20190822033145/config/secrets.yml as deploy@167.71.252.10
+ DEBUG [aeaa45c2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/config/secrets.yml /home/deploy/pawsup_backend/releases/20190822033145/config/secrets.yml )
+  INFO [aeaa45c2] Finished in 0.091 seconds with exit status 0 (successful).
+  INFO [fe352d4a] Running /usr/bin/env mkdir -p /home/deploy/pawsup_backend/releases/20190822033145 /home/deploy/pawsup_backend/releases/20190822033145/tmp /home/deploy/pawsup_backend/releases/20190822033145/vendor /home/deploy/pawsup_backend/releases/20190822033145/public as deploy@167.71.252.10
+ DEBUG [fe352d4a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env mkdir -p /home/deploy/pawsup_backend/releases/20190822033145 /home/deploy/pawsup_backend/releases/20190822033145/tmp /home/deploy/pawsup_backend/releases/20190822033145/vendor /home/deploy/pawsup_backend/releases/20190822033145/public )
+  INFO [fe352d4a] Finished in 0.091 seconds with exit status 0 (successful).
+ DEBUG [3390035e] Running [ -L /home/deploy/pawsup_backend/releases/20190822033145/log ] as deploy@167.71.252.10
+ DEBUG [3390035e] Command: [ -L /home/deploy/pawsup_backend/releases/20190822033145/log ]
+ DEBUG [3390035e] Finished in 0.092 seconds with exit status 1 (failed).
+ DEBUG [9b635cec] Running [ -d /home/deploy/pawsup_backend/releases/20190822033145/log ] as deploy@167.71.252.10
+ DEBUG [9b635cec] Command: [ -d /home/deploy/pawsup_backend/releases/20190822033145/log ]
+ DEBUG [9b635cec] Finished in 0.095 seconds with exit status 0 (successful).
+  INFO [99dcd36c] Running /usr/bin/env rm -rf /home/deploy/pawsup_backend/releases/20190822033145/log as deploy@167.71.252.10
+ DEBUG [99dcd36c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env rm -rf /home/deploy/pawsup_backend/releases/20190822033145/log )
+  INFO [99dcd36c] Finished in 0.105 seconds with exit status 0 (successful).
+  INFO [0d8e37a6] Running /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/log /home/deploy/pawsup_backend/releases/20190822033145/log as deploy@167.71.252.10
+ DEBUG [0d8e37a6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/log /home/deploy/pawsup_backend/releases/20190822033145/log )
+  INFO [0d8e37a6] Finished in 0.089 seconds with exit status 0 (successful).
+ DEBUG [40048c54] Running [ -L /home/deploy/pawsup_backend/releases/20190822033145/tmp/pids ] as deploy@167.71.252.10
+ DEBUG [40048c54] Command: [ -L /home/deploy/pawsup_backend/releases/20190822033145/tmp/pids ]
+ DEBUG [40048c54] Finished in 0.089 seconds with exit status 1 (failed).
+ DEBUG [3a0de2ec] Running [ -d /home/deploy/pawsup_backend/releases/20190822033145/tmp/pids ] as deploy@167.71.252.10
+ DEBUG [3a0de2ec] Command: [ -d /home/deploy/pawsup_backend/releases/20190822033145/tmp/pids ]
+ DEBUG [3a0de2ec] Finished in 0.100 seconds with exit status 1 (failed).
+  INFO [3d0b4c68] Running /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/tmp/pids /home/deploy/pawsup_backend/releases/20190822033145/tmp/pids as deploy@167.71.252.10
+ DEBUG [3d0b4c68] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/tmp/pids /home/deploy/pawsup_backend/releases/20190822033145/tmp/pids )
+  INFO [3d0b4c68] Finished in 0.103 seconds with exit status 0 (successful).
+ DEBUG [827a8232] Running [ -L /home/deploy/pawsup_backend/releases/20190822033145/tmp/cache ] as deploy@167.71.252.10
+ DEBUG [827a8232] Command: [ -L /home/deploy/pawsup_backend/releases/20190822033145/tmp/cache ]
+ DEBUG [827a8232] Finished in 0.088 seconds with exit status 1 (failed).
+ DEBUG [8e862a04] Running [ -d /home/deploy/pawsup_backend/releases/20190822033145/tmp/cache ] as deploy@167.71.252.10
+ DEBUG [8e862a04] Command: [ -d /home/deploy/pawsup_backend/releases/20190822033145/tmp/cache ]
+ DEBUG [8e862a04] Finished in 0.090 seconds with exit status 1 (failed).
+  INFO [0f668e5c] Running /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/tmp/cache /home/deploy/pawsup_backend/releases/20190822033145/tmp/cache as deploy@167.71.252.10
+ DEBUG [0f668e5c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/tmp/cache /home/deploy/pawsup_backend/releases/20190822033145/tmp/cache )
+  INFO [0f668e5c] Finished in 0.094 seconds with exit status 0 (successful).
+ DEBUG [530cc1c4] Running [ -L /home/deploy/pawsup_backend/releases/20190822033145/tmp/sockets ] as deploy@167.71.252.10
+ DEBUG [530cc1c4] Command: [ -L /home/deploy/pawsup_backend/releases/20190822033145/tmp/sockets ]
+ DEBUG [530cc1c4] Finished in 0.110 seconds with exit status 1 (failed).
+ DEBUG [a075faed] Running [ -d /home/deploy/pawsup_backend/releases/20190822033145/tmp/sockets ] as deploy@167.71.252.10
+ DEBUG [a075faed] Command: [ -d /home/deploy/pawsup_backend/releases/20190822033145/tmp/sockets ]
+ DEBUG [a075faed] Finished in 0.095 seconds with exit status 1 (failed).
+  INFO [361905ea] Running /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/tmp/sockets /home/deploy/pawsup_backend/releases/20190822033145/tmp/sockets as deploy@167.71.252.10
+ DEBUG [361905ea] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/tmp/sockets /home/deploy/pawsup_backend/releases/20190822033145/tmp/sockets )
+  INFO [361905ea] Finished in 0.097 seconds with exit status 0 (successful).
+ DEBUG [2105baad] Running [ -L /home/deploy/pawsup_backend/releases/20190822033145/vendor/bundle ] as deploy@167.71.252.10
+ DEBUG [2105baad] Command: [ -L /home/deploy/pawsup_backend/releases/20190822033145/vendor/bundle ]
+ DEBUG [2105baad] Finished in 0.091 seconds with exit status 1 (failed).
+ DEBUG [7344c9e3] Running [ -d /home/deploy/pawsup_backend/releases/20190822033145/vendor/bundle ] as deploy@167.71.252.10
+ DEBUG [7344c9e3] Command: [ -d /home/deploy/pawsup_backend/releases/20190822033145/vendor/bundle ]
+ DEBUG [7344c9e3] Finished in 0.107 seconds with exit status 1 (failed).
+  INFO [754ac1d1] Running /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/vendor/bundle /home/deploy/pawsup_backend/releases/20190822033145/vendor/bundle as deploy@167.71.252.10
+ DEBUG [754ac1d1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/vendor/bundle /home/deploy/pawsup_backend/releases/20190822033145/vendor/bundle )
+  INFO [754ac1d1] Finished in 0.101 seconds with exit status 0 (successful).
+ DEBUG [0748e922] Running [ -L /home/deploy/pawsup_backend/releases/20190822033145/public/system ] as deploy@167.71.252.10
+ DEBUG [0748e922] Command: [ -L /home/deploy/pawsup_backend/releases/20190822033145/public/system ]
+ DEBUG [0748e922] Finished in 0.093 seconds with exit status 1 (failed).
+ DEBUG [9702acbd] Running [ -d /home/deploy/pawsup_backend/releases/20190822033145/public/system ] as deploy@167.71.252.10
+ DEBUG [9702acbd] Command: [ -d /home/deploy/pawsup_backend/releases/20190822033145/public/system ]
+ DEBUG [9702acbd] Finished in 0.099 seconds with exit status 1 (failed).
+  INFO [af05d0d1] Running /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/public/system /home/deploy/pawsup_backend/releases/20190822033145/public/system as deploy@167.71.252.10
+ DEBUG [af05d0d1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/public/system /home/deploy/pawsup_backend/releases/20190822033145/public/system )
+  INFO [af05d0d1] Finished in 0.099 seconds with exit status 0 (successful).
+ DEBUG [8d289210] Running [ -L /home/deploy/pawsup_backend/releases/20190822033145/public/uploads ] as deploy@167.71.252.10
+ DEBUG [8d289210] Command: [ -L /home/deploy/pawsup_backend/releases/20190822033145/public/uploads ]
+ DEBUG [8d289210] Finished in 0.088 seconds with exit status 1 (failed).
+ DEBUG [8e84b8ec] Running [ -d /home/deploy/pawsup_backend/releases/20190822033145/public/uploads ] as deploy@167.71.252.10
+ DEBUG [8e84b8ec] Command: [ -d /home/deploy/pawsup_backend/releases/20190822033145/public/uploads ]
+ DEBUG [8e84b8ec] Finished in 0.105 seconds with exit status 1 (failed).
+  INFO [4e6a95a1] Running /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/public/uploads /home/deploy/pawsup_backend/releases/20190822033145/public/uploads as deploy@167.71.252.10
+ DEBUG [4e6a95a1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/public/uploads /home/deploy/pawsup_backend/releases/20190822033145/public/uploads )
+  INFO [4e6a95a1] Finished in 0.092 seconds with exit status 0 (successful).
+ DEBUG [a79fb602] Running [ -L /home/deploy/pawsup_backend/releases/20190822033145/public/assets ] as deploy@167.71.252.10
+ DEBUG [a79fb602] Command: [ -L /home/deploy/pawsup_backend/releases/20190822033145/public/assets ]
+ DEBUG [a79fb602] Finished in 0.097 seconds with exit status 1 (failed).
+ DEBUG [bbd21eb2] Running [ -d /home/deploy/pawsup_backend/releases/20190822033145/public/assets ] as deploy@167.71.252.10
+ DEBUG [bbd21eb2] Command: [ -d /home/deploy/pawsup_backend/releases/20190822033145/public/assets ]
+ DEBUG [bbd21eb2] Finished in 0.097 seconds with exit status 1 (failed).
+  INFO [fa28741b] Running /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/public/assets /home/deploy/pawsup_backend/releases/20190822033145/public/assets as deploy@167.71.252.10
+ DEBUG [fa28741b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/public/assets /home/deploy/pawsup_backend/releases/20190822033145/public/assets )
+  INFO [fa28741b] Finished in 0.093 seconds with exit status 0 (successful).
+ DEBUG [4dc7d60f] Running if test ! -d /home/deploy/pawsup_backend/releases/20190822033145; then echo "Directory does not exist '/home/deploy/pawsup_backend/releases/20190822033145'" 1>&2; false; fi as deploy@167.71.252.10
+ DEBUG [4dc7d60f] Command: if test ! -d /home/deploy/pawsup_backend/releases/20190822033145; then echo "Directory does not exist '/home/deploy/pawsup_backend/releases/20190822033145'" 1>&2; false; fi
+ DEBUG [4dc7d60f] Finished in 0.090 seconds with exit status 0 (successful).
+ DEBUG [5447344c] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deploy/pawsup_backend/shared/bundle as deploy@167.71.252.10
+ DEBUG [5447344c] Command: cd /home/deploy/pawsup_backend/releases/20190822033145 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deploy/pawsup_backend/shared/bundle )
+ DEBUG [5447344c] 	The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+ DEBUG [5447344c] 	The following gems are missing
+ DEBUG [5447344c] 	 * rake (12.3.2)
+ DEBUG [5447344c] 	 * concurrent-ruby (1.1.5)
+ DEBUG [5447344c] 	 * i18n (1.6.0)
+ DEBUG [5447344c] 	 * minitest (5.11.3)
+ DEBUG [5447344c] 	 * thread_safe (0.3.6)
+ DEBUG [5447344c] 	 * tzinfo (1.2.5)
+ DEBUG [5447344c] 	 * activesupport (5.2.3)
+ DEBUG [5447344c] 	 * builder (3.2.3)
+ DEBUG [5447344c] 	 * erubi (1.8.0)
+ DEBUG [5447344c] 	 * mini_portile2 (2.4.0)
+ DEBUG [5447344c] 	 * nokogiri (1.10.4)
+ DEBUG [5447344c] 	 * rails-dom-testing (2.0.3)
+ DEBUG [5447344c] 	 * crass (1.0.4)
+ DEBUG [5447344c] 	 * loofah (2.2.3)
+ DEBUG [5447344c] 	 * rails-html-sanitizer (1.0.4)
+ DEBUG [5447344c] 	 * actionview (5.2.3)
+ DEBUG [5447344c] 	 * rack (2.0.7)
+ DEBUG [5447344c] 	 * rack-test (1.1.0)
+ DEBUG [5447344c] 	 * actionpack (5.2.3)
+ DEBUG [5447344c] 	 * nio4r (2.3.1)
+ DEBUG [5447344c] 	 * websocket-extensions (0.1.3)
+ DEBUG [5447344c] 	 * websocket-driver (0.7.0)
+ DEBUG [5447344c] 	 * actioncable (5.2.3)
+ DEBUG [5447344c] 	 * globalid (0.4.2)
+ DEBUG [5447344c] 	 * activejob (5.2.3)
+ DEBUG [5447344c] 	 * mini_mime (1.0.1)
+ DEBUG [5447344c] 	 * mail (2.7.1)
+ DEBUG [5447344c] 	 * actionmailer (5.2.3)
+ DEBUG [5447344c] 	 * activemodel (5.2.3)
+ DEBUG [5447344c] 	 * case_transform (0.2)
+ DEBUG [5447344c] 	 * jsonapi-renderer (0.2.0)
+ DEBUG [5447344c] 	 * active_model_serializers (0.10.9)
+ DEBUG [5447344c] 	 * arel (9.0.0)
+ DEBUG [5447344c] 	 * activerecord (5.2.3)
+ DEBUG [5447344c] 	 * mimemagic (0.3.3)
+ DEBUG [5447344c] 	 * marcel (0.3.3)
+ DEBUG [5447344c] 	 * activestorage (5.2.3)
+ DEBUG [5447344c] 	 * net-ssh (5.2.0)
+ DEBUG [5447344c] 	 * net-scp (2.0.0)
+ DEBUG [5447344c] 	 * sshkit (1.20.0)
+ DEBUG [5447344c] 	 * airbrussh (1.3.3)
+ DEBUG [5447344c] 	 * bcrypt (3.1.12)
+ DEBUG [5447344c] 	 * bcrypt_pbkdf (1.0.1)
+ DEBUG [5447344c] 	 * msgpack (1.2.10)
+ DEBUG [5447344c] 	 * bootsnap (1.4.4)
+ DEBUG [5447344c] 	 * byebug (11.0.1)
+ DEBUG [5447344c] 	 * capistrano (3.11.0)
+ DEBUG [5447344c] 	 * capistrano-bundler (1.6.0)
+ DEBUG [5447344c] 	 * capistrano-passenger (0.2.0)
+ DEBUG [5447344c] 	 * capistrano-rails (1.4.0)
+ DEBUG [5447344c] 	 * capistrano-rbenv (2.1.4)
+ DEBUG [5447344c] 	 * ed25519 (1.2.4)
+ DEBUG [5447344c] 	 * ffi (1.10.0)
+ DEBUG [5447344c] 	 * jwt (2.1.0)
+ DEBUG [5447344c] 	 * rb-fsevent (0.10.3)
+ DEBUG [5447344c] 	 * rb-inotify (0.10.0)
+ DEBUG [5447344c] 	 * ruby_dep (1.5.0)
+ DEBUG [5447344c] 	 * listen (3.1.5)
+ DEBUG [5447344c] 	 * method_source (0.9.2)
+ DEBUG [5447344c] 	 * pg (1.1.4)
+ DEBUG [5447344c] 	 * puma (3.12.1)
+ DEBUG [5447344c] 	 * rack-cors (1.0.3)
+ DEBUG [5447344c] 	 * thor (0.20.3)
+ DEBUG [5447344c] 	 * railties (5.2.3)
+ DEBUG [5447344c] 	 * sprockets (3.7.2)
+ DEBUG [5447344c] 	 * sprockets-rails (3.2.1)
+ DEBUG [5447344c] 	 * rails (5.2.3)
+ DEBUG [5447344c] 	 * spring (2.0.2)
+ DEBUG [5447344c] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [5447344c] 	Install missing gems with `bundle install`
+ DEBUG [5447344c] Finished in 0.591 seconds with exit status 1 (failed).
+  INFO [ee9a94b7] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deploy/pawsup_backend/shared/bundle --jobs 4 --without development test --deployment --quiet as deploy@167.71.252.10
+ DEBUG [ee9a94b7] Command: cd /home/deploy/pawsup_backend/releases/20190822033145 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deploy/pawsup_backend/shared/bundle --jobs 4 --without development test --deployment --quiet )
+  INFO [ee9a94b7] Finished in 104.017 seconds with exit status 0 (successful).
+ DEBUG [aef5b34b] Running if test ! -d /home/deploy/pawsup_backend/releases/20190822033145; then echo "Directory does not exist '/home/deploy/pawsup_backend/releases/20190822033145'" 1>&2; false; fi as deploy@167.71.252.10
+ DEBUG [aef5b34b] Command: if test ! -d /home/deploy/pawsup_backend/releases/20190822033145; then echo "Directory does not exist '/home/deploy/pawsup_backend/releases/20190822033145'" 1>&2; false; fi
+ DEBUG [aef5b34b] Finished in 0.087 seconds with exit status 0 (successful).
+  INFO [0c76b0e0] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as deploy@167.71.252.10
+ DEBUG [0c76b0e0] Command: cd /home/deploy/pawsup_backend/releases/20190822033145 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+ DEBUG [0c76b0e0] 	rake aborted!
+ DEBUG [0c76b0e0] 	Don't know how to build task 'assets:precompile' (See the list of available tasks with `rake --tasks`)
+ DEBUG [0c76b0e0] 	/home/deploy/pawsup_backend/shared/bundle/ruby/2.6.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+/home/deploy/.rbenv/versions/2.6.3/bin/bundle:23:in `load'
+/home/deploy/.rbenv/versions/2.6.3/bin/bundle:23:in `<main>'
+ DEBUG [0c76b0e0] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-08-21 23:35:05 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [f27b4309] Running [ -d $HOME/.rbenv/versions/2.6.3 ] as deploy@167.71.252.10
+ DEBUG [f27b4309] Command: [ -d $HOME/.rbenv/versions/2.6.3 ]
+ DEBUG [f27b4309] Finished in 0.648 seconds with exit status 0 (successful).
+ DEBUG [465ba43a] Running /usr/bin/env which passenger as deploy@167.71.252.10
+ DEBUG [465ba43a] Command: /usr/bin/env which passenger
+ DEBUG [465ba43a] 	/usr/bin/passenger
+ DEBUG [465ba43a] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [799cd18b] Running /usr/bin/env mkdir -p /tmp as deploy@167.71.252.10
+ DEBUG [799cd18b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env mkdir -p /tmp )
+  INFO [799cd18b] Finished in 0.098 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-pawsup_backend-production-flatironschool.sh 0.0%
+  INFO Uploading /tmp/git-ssh-pawsup_backend-production-flatironschool.sh 100.0%
+  INFO [e2891079] Running /usr/bin/env chmod 700 /tmp/git-ssh-pawsup_backend-production-flatironschool.sh as deploy@167.71.252.10
+ DEBUG [e2891079] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env chmod 700 /tmp/git-ssh-pawsup_backend-production-flatironschool.sh )
+  INFO [e2891079] Finished in 0.095 seconds with exit status 0 (successful).
+  INFO [80eb8fec] Running /usr/bin/env git ls-remote git@github.com:adamjgordon28/paws-up-backend.git HEAD as deploy@167.71.252.10
+ DEBUG [80eb8fec] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pawsup_backend-production-flatironschool.sh" ; /usr/bin/env git ls-remote git@github.com:adamjgordon28/paws-up-backend.git HEAD )
+ DEBUG [80eb8fec] 	2af3a4e9a8c23132478ee39461f7ed9d37115f70	HEAD
+  INFO [80eb8fec] Finished in 0.473 seconds with exit status 0 (successful).
+  INFO [4a3c4953] Running /usr/bin/env mkdir -p /home/deploy/pawsup_backend/shared /home/deploy/pawsup_backend/releases as deploy@167.71.252.10
+ DEBUG [4a3c4953] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env mkdir -p /home/deploy/pawsup_backend/shared /home/deploy/pawsup_backend/releases )
+  INFO [4a3c4953] Finished in 0.044 seconds with exit status 0 (successful).
+  INFO [4dcb541b] Running /usr/bin/env mkdir -p /home/deploy/pawsup_backend/shared/log /home/deploy/pawsup_backend/shared/tmp/pids /home/deploy/pawsup_backend/shared/tmp/cache /home/deploy/pawsup_backend/shared/tmp/sockets /home/deploy/pawsup_backend/shared/vendor/bundle /home/deploy/pawsup_backend/shared/public/system /home/deploy/pawsup_backend/shared/public/uploads /home/deploy/pawsup_backend/shared/public/assets as deploy@167.71.252.10
+ DEBUG [4dcb541b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env mkdir -p /home/deploy/pawsup_backend/shared/log /home/deploy/pawsup_backend/shared/tmp/pids /home/deploy/pawsup_backend/shared/tmp/cache /home/deploy/pawsup_backend/shared/tmp/sockets /home/deploy/pawsup_backend/shared/vendor/bundle /home/deploy/pawsup_backend/shared/public/system /home/deploy/pawsup_backend/shared/public/uploads /home/deploy/pawsup_backend/shared/public/assets )
+  INFO [4dcb541b] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO [c8d0f5c6] Running /usr/bin/env mkdir -p /home/deploy/pawsup_backend/shared/config as deploy@167.71.252.10
+ DEBUG [c8d0f5c6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env mkdir -p /home/deploy/pawsup_backend/shared/config )
+  INFO [c8d0f5c6] Finished in 0.094 seconds with exit status 0 (successful).
+ DEBUG [894e03dd] Running [ -f /home/deploy/pawsup_backend/shared/config/database.yml ] as deploy@167.71.252.10
+ DEBUG [894e03dd] Command: [ -f /home/deploy/pawsup_backend/shared/config/database.yml ]
+ DEBUG [894e03dd] Finished in 0.096 seconds with exit status 0 (successful).
+ DEBUG [5aac8b87] Running [ -f /home/deploy/pawsup_backend/shared/config/secrets.yml ] as deploy@167.71.252.10
+ DEBUG [5aac8b87] Command: [ -f /home/deploy/pawsup_backend/shared/config/secrets.yml ]
+ DEBUG [5aac8b87] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [ce0cc8f4] Running [ -f /home/deploy/pawsup_backend/current/REVISION ] as deploy@167.71.252.10
+ DEBUG [ce0cc8f4] Command: [ -f /home/deploy/pawsup_backend/current/REVISION ]
+ DEBUG [ce0cc8f4] Finished in 0.089 seconds with exit status 1 (failed).
+ DEBUG [07ea355a] Running [ -f /home/deploy/pawsup_backend/repo/HEAD ] as deploy@167.71.252.10
+ DEBUG [07ea355a] Command: [ -f /home/deploy/pawsup_backend/repo/HEAD ]
+ DEBUG [07ea355a] Finished in 0.092 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/pawsup_backend/repo
+ DEBUG [d7074489] Running if test ! -d /home/deploy/pawsup_backend/repo; then echo "Directory does not exist '/home/deploy/pawsup_backend/repo'" 1>&2; false; fi as deploy@167.71.252.10
+ DEBUG [d7074489] Command: if test ! -d /home/deploy/pawsup_backend/repo; then echo "Directory does not exist '/home/deploy/pawsup_backend/repo'" 1>&2; false; fi
+ DEBUG [d7074489] Finished in 0.101 seconds with exit status 0 (successful).
+  INFO [17c70fad] Running /usr/bin/env git remote set-url origin git@github.com:adamjgordon28/paws-up-backend.git as deploy@167.71.252.10
+ DEBUG [17c70fad] Command: cd /home/deploy/pawsup_backend/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pawsup_backend-production-flatironschool.sh" ; /usr/bin/env git remote set-url origin git@github.com:adamjgordon28/paws-up-backend.git )
+  INFO [17c70fad] Finished in 0.095 seconds with exit status 0 (successful).
+  INFO [f2581714] Running /usr/bin/env git remote update --prune as deploy@167.71.252.10
+ DEBUG [f2581714] Command: cd /home/deploy/pawsup_backend/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pawsup_backend-production-flatironschool.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [f2581714] 	Fetching origin
+  INFO [f2581714] Finished in 0.453 seconds with exit status 0 (successful).
+ DEBUG [16ccf334] Running if test ! -d /home/deploy/pawsup_backend/repo; then echo "Directory does not exist '/home/deploy/pawsup_backend/repo'" 1>&2; false; fi as deploy@167.71.252.10
+ DEBUG [16ccf334] Command: if test ! -d /home/deploy/pawsup_backend/repo; then echo "Directory does not exist '/home/deploy/pawsup_backend/repo'" 1>&2; false; fi
+ DEBUG [16ccf334] Finished in 0.042 seconds with exit status 0 (successful).
+  INFO [99d0f2b6] Running /usr/bin/env mkdir -p /home/deploy/pawsup_backend/releases/20190822033507 as deploy@167.71.252.10
+ DEBUG [99d0f2b6] Command: cd /home/deploy/pawsup_backend/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pawsup_backend-production-flatironschool.sh" ; /usr/bin/env mkdir -p /home/deploy/pawsup_backend/releases/20190822033507 )
+  INFO [99d0f2b6] Finished in 0.092 seconds with exit status 0 (successful).
+  INFO [2b0f8e1f] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/pawsup_backend/releases/20190822033507 as deploy@167.71.252.10
+ DEBUG [2b0f8e1f] Command: cd /home/deploy/pawsup_backend/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pawsup_backend-production-flatironschool.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/pawsup_backend/releases/20190822033507 )
+  INFO [2b0f8e1f] Finished in 0.104 seconds with exit status 0 (successful).
+ DEBUG [bf2bbc80] Running if test ! -d /home/deploy/pawsup_backend/repo; then echo "Directory does not exist '/home/deploy/pawsup_backend/repo'" 1>&2; false; fi as deploy@167.71.252.10
+ DEBUG [bf2bbc80] Command: if test ! -d /home/deploy/pawsup_backend/repo; then echo "Directory does not exist '/home/deploy/pawsup_backend/repo'" 1>&2; false; fi
+ DEBUG [bf2bbc80] Finished in 0.090 seconds with exit status 0 (successful).
+ DEBUG [4b98f104] Running /usr/bin/env git rev-list --max-count=1 master as deploy@167.71.252.10
+ DEBUG [4b98f104] Command: cd /home/deploy/pawsup_backend/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pawsup_backend-production-flatironschool.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [4b98f104] 	2af3a4e9a8c23132478ee39461f7ed9d37115f70
+ DEBUG [4b98f104] Finished in 0.092 seconds with exit status 0 (successful).
+ DEBUG [ff408fdd] Running if test ! -d /home/deploy/pawsup_backend/releases/20190822033507; then echo "Directory does not exist '/home/deploy/pawsup_backend/releases/20190822033507'" 1>&2; false; fi as deploy@167.71.252.10
+ DEBUG [ff408fdd] Command: if test ! -d /home/deploy/pawsup_backend/releases/20190822033507; then echo "Directory does not exist '/home/deploy/pawsup_backend/releases/20190822033507'" 1>&2; false; fi
+ DEBUG [ff408fdd] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [3a7d3d00] Running /usr/bin/env echo "2af3a4e9a8c23132478ee39461f7ed9d37115f70" > REVISION as deploy@167.71.252.10
+ DEBUG [3a7d3d00] Command: cd /home/deploy/pawsup_backend/releases/20190822033507 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env echo "2af3a4e9a8c23132478ee39461f7ed9d37115f70" > REVISION )
+  INFO [3a7d3d00] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [3d68758c] Running /usr/bin/env mkdir -p /home/deploy/pawsup_backend/releases/20190822033507/config as deploy@167.71.252.10
+ DEBUG [3d68758c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env mkdir -p /home/deploy/pawsup_backend/releases/20190822033507/config )
+  INFO [3d68758c] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [87a46430] Running [ -L /home/deploy/pawsup_backend/releases/20190822033507/config/database.yml ] as deploy@167.71.252.10
+ DEBUG [87a46430] Command: [ -L /home/deploy/pawsup_backend/releases/20190822033507/config/database.yml ]
+ DEBUG [87a46430] Finished in 0.091 seconds with exit status 1 (failed).
+ DEBUG [a7cfbfc3] Running [ -f /home/deploy/pawsup_backend/releases/20190822033507/config/database.yml ] as deploy@167.71.252.10
+ DEBUG [a7cfbfc3] Command: [ -f /home/deploy/pawsup_backend/releases/20190822033507/config/database.yml ]
+ DEBUG [a7cfbfc3] Finished in 0.092 seconds with exit status 1 (failed).
+  INFO [3b5fbf3f] Running /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/config/database.yml /home/deploy/pawsup_backend/releases/20190822033507/config/database.yml as deploy@167.71.252.10
+ DEBUG [3b5fbf3f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/config/database.yml /home/deploy/pawsup_backend/releases/20190822033507/config/database.yml )
+  INFO [3b5fbf3f] Finished in 0.099 seconds with exit status 0 (successful).
+ DEBUG [625976d1] Running [ -L /home/deploy/pawsup_backend/releases/20190822033507/config/secrets.yml ] as deploy@167.71.252.10
+ DEBUG [625976d1] Command: [ -L /home/deploy/pawsup_backend/releases/20190822033507/config/secrets.yml ]
+ DEBUG [625976d1] Finished in 0.092 seconds with exit status 1 (failed).
+ DEBUG [7ab235bb] Running [ -f /home/deploy/pawsup_backend/releases/20190822033507/config/secrets.yml ] as deploy@167.71.252.10
+ DEBUG [7ab235bb] Command: [ -f /home/deploy/pawsup_backend/releases/20190822033507/config/secrets.yml ]
+ DEBUG [7ab235bb] Finished in 0.093 seconds with exit status 1 (failed).
+  INFO [4c1afa00] Running /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/config/secrets.yml /home/deploy/pawsup_backend/releases/20190822033507/config/secrets.yml as deploy@167.71.252.10
+ DEBUG [4c1afa00] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/config/secrets.yml /home/deploy/pawsup_backend/releases/20190822033507/config/secrets.yml )
+  INFO [4c1afa00] Finished in 0.095 seconds with exit status 0 (successful).
+  INFO [70835d0c] Running /usr/bin/env mkdir -p /home/deploy/pawsup_backend/releases/20190822033507 /home/deploy/pawsup_backend/releases/20190822033507/tmp /home/deploy/pawsup_backend/releases/20190822033507/vendor /home/deploy/pawsup_backend/releases/20190822033507/public as deploy@167.71.252.10
+ DEBUG [70835d0c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env mkdir -p /home/deploy/pawsup_backend/releases/20190822033507 /home/deploy/pawsup_backend/releases/20190822033507/tmp /home/deploy/pawsup_backend/releases/20190822033507/vendor /home/deploy/pawsup_backend/releases/20190822033507/public )
+  INFO [70835d0c] Finished in 0.093 seconds with exit status 0 (successful).
+ DEBUG [12a8282c] Running [ -L /home/deploy/pawsup_backend/releases/20190822033507/log ] as deploy@167.71.252.10
+ DEBUG [12a8282c] Command: [ -L /home/deploy/pawsup_backend/releases/20190822033507/log ]
+ DEBUG [12a8282c] Finished in 0.093 seconds with exit status 1 (failed).
+ DEBUG [36519f77] Running [ -d /home/deploy/pawsup_backend/releases/20190822033507/log ] as deploy@167.71.252.10
+ DEBUG [36519f77] Command: [ -d /home/deploy/pawsup_backend/releases/20190822033507/log ]
+ DEBUG [36519f77] Finished in 0.101 seconds with exit status 0 (successful).
+  INFO [5476f5da] Running /usr/bin/env rm -rf /home/deploy/pawsup_backend/releases/20190822033507/log as deploy@167.71.252.10
+ DEBUG [5476f5da] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env rm -rf /home/deploy/pawsup_backend/releases/20190822033507/log )
+  INFO [5476f5da] Finished in 0.089 seconds with exit status 0 (successful).
+  INFO [3989710d] Running /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/log /home/deploy/pawsup_backend/releases/20190822033507/log as deploy@167.71.252.10
+ DEBUG [3989710d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/log /home/deploy/pawsup_backend/releases/20190822033507/log )
+  INFO [3989710d] Finished in 0.085 seconds with exit status 0 (successful).
+ DEBUG [56b9dd96] Running [ -L /home/deploy/pawsup_backend/releases/20190822033507/tmp/pids ] as deploy@167.71.252.10
+ DEBUG [56b9dd96] Command: [ -L /home/deploy/pawsup_backend/releases/20190822033507/tmp/pids ]
+ DEBUG [56b9dd96] Finished in 0.090 seconds with exit status 1 (failed).
+ DEBUG [89146710] Running [ -d /home/deploy/pawsup_backend/releases/20190822033507/tmp/pids ] as deploy@167.71.252.10
+ DEBUG [89146710] Command: [ -d /home/deploy/pawsup_backend/releases/20190822033507/tmp/pids ]
+ DEBUG [89146710] Finished in 0.104 seconds with exit status 1 (failed).
+  INFO [5d4fbb45] Running /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/tmp/pids /home/deploy/pawsup_backend/releases/20190822033507/tmp/pids as deploy@167.71.252.10
+ DEBUG [5d4fbb45] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/tmp/pids /home/deploy/pawsup_backend/releases/20190822033507/tmp/pids )
+  INFO [5d4fbb45] Finished in 0.090 seconds with exit status 0 (successful).
+ DEBUG [53ce13a4] Running [ -L /home/deploy/pawsup_backend/releases/20190822033507/tmp/cache ] as deploy@167.71.252.10
+ DEBUG [53ce13a4] Command: [ -L /home/deploy/pawsup_backend/releases/20190822033507/tmp/cache ]
+ DEBUG [53ce13a4] Finished in 0.096 seconds with exit status 1 (failed).
+ DEBUG [c06929e3] Running [ -d /home/deploy/pawsup_backend/releases/20190822033507/tmp/cache ] as deploy@167.71.252.10
+ DEBUG [c06929e3] Command: [ -d /home/deploy/pawsup_backend/releases/20190822033507/tmp/cache ]
+ DEBUG [c06929e3] Finished in 0.090 seconds with exit status 1 (failed).
+  INFO [90397e77] Running /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/tmp/cache /home/deploy/pawsup_backend/releases/20190822033507/tmp/cache as deploy@167.71.252.10
+ DEBUG [90397e77] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/tmp/cache /home/deploy/pawsup_backend/releases/20190822033507/tmp/cache )
+  INFO [90397e77] Finished in 0.091 seconds with exit status 0 (successful).
+ DEBUG [f75aab64] Running [ -L /home/deploy/pawsup_backend/releases/20190822033507/tmp/sockets ] as deploy@167.71.252.10
+ DEBUG [f75aab64] Command: [ -L /home/deploy/pawsup_backend/releases/20190822033507/tmp/sockets ]
+ DEBUG [f75aab64] Finished in 0.086 seconds with exit status 1 (failed).
+ DEBUG [6d837f0f] Running [ -d /home/deploy/pawsup_backend/releases/20190822033507/tmp/sockets ] as deploy@167.71.252.10
+ DEBUG [6d837f0f] Command: [ -d /home/deploy/pawsup_backend/releases/20190822033507/tmp/sockets ]
+ DEBUG [6d837f0f] Finished in 0.099 seconds with exit status 1 (failed).
+  INFO [086a4cb3] Running /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/tmp/sockets /home/deploy/pawsup_backend/releases/20190822033507/tmp/sockets as deploy@167.71.252.10
+ DEBUG [086a4cb3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/tmp/sockets /home/deploy/pawsup_backend/releases/20190822033507/tmp/sockets )
+  INFO [086a4cb3] Finished in 0.089 seconds with exit status 0 (successful).
+ DEBUG [01a5176a] Running [ -L /home/deploy/pawsup_backend/releases/20190822033507/vendor/bundle ] as deploy@167.71.252.10
+ DEBUG [01a5176a] Command: [ -L /home/deploy/pawsup_backend/releases/20190822033507/vendor/bundle ]
+ DEBUG [01a5176a] Finished in 0.086 seconds with exit status 1 (failed).
+ DEBUG [fa4fd129] Running [ -d /home/deploy/pawsup_backend/releases/20190822033507/vendor/bundle ] as deploy@167.71.252.10
+ DEBUG [fa4fd129] Command: [ -d /home/deploy/pawsup_backend/releases/20190822033507/vendor/bundle ]
+ DEBUG [fa4fd129] Finished in 0.091 seconds with exit status 1 (failed).
+  INFO [916b6568] Running /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/vendor/bundle /home/deploy/pawsup_backend/releases/20190822033507/vendor/bundle as deploy@167.71.252.10
+ DEBUG [916b6568] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/vendor/bundle /home/deploy/pawsup_backend/releases/20190822033507/vendor/bundle )
+  INFO [916b6568] Finished in 0.094 seconds with exit status 0 (successful).
+ DEBUG [91941d51] Running [ -L /home/deploy/pawsup_backend/releases/20190822033507/public/system ] as deploy@167.71.252.10
+ DEBUG [91941d51] Command: [ -L /home/deploy/pawsup_backend/releases/20190822033507/public/system ]
+ DEBUG [91941d51] Finished in 0.092 seconds with exit status 1 (failed).
+ DEBUG [e667915e] Running [ -d /home/deploy/pawsup_backend/releases/20190822033507/public/system ] as deploy@167.71.252.10
+ DEBUG [e667915e] Command: [ -d /home/deploy/pawsup_backend/releases/20190822033507/public/system ]
+ DEBUG [e667915e] Finished in 0.103 seconds with exit status 1 (failed).
+  INFO [3f894052] Running /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/public/system /home/deploy/pawsup_backend/releases/20190822033507/public/system as deploy@167.71.252.10
+ DEBUG [3f894052] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/public/system /home/deploy/pawsup_backend/releases/20190822033507/public/system )
+  INFO [3f894052] Finished in 0.097 seconds with exit status 0 (successful).
+ DEBUG [0d16b5d3] Running [ -L /home/deploy/pawsup_backend/releases/20190822033507/public/uploads ] as deploy@167.71.252.10
+ DEBUG [0d16b5d3] Command: [ -L /home/deploy/pawsup_backend/releases/20190822033507/public/uploads ]
+ DEBUG [0d16b5d3] Finished in 0.109 seconds with exit status 1 (failed).
+ DEBUG [521509ec] Running [ -d /home/deploy/pawsup_backend/releases/20190822033507/public/uploads ] as deploy@167.71.252.10
+ DEBUG [521509ec] Command: [ -d /home/deploy/pawsup_backend/releases/20190822033507/public/uploads ]
+ DEBUG [521509ec] Finished in 0.085 seconds with exit status 1 (failed).
+  INFO [b05574cf] Running /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/public/uploads /home/deploy/pawsup_backend/releases/20190822033507/public/uploads as deploy@167.71.252.10
+ DEBUG [b05574cf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/public/uploads /home/deploy/pawsup_backend/releases/20190822033507/public/uploads )
+  INFO [b05574cf] Finished in 0.099 seconds with exit status 0 (successful).
+ DEBUG [631453df] Running [ -L /home/deploy/pawsup_backend/releases/20190822033507/public/assets ] as deploy@167.71.252.10
+ DEBUG [631453df] Command: [ -L /home/deploy/pawsup_backend/releases/20190822033507/public/assets ]
+ DEBUG [631453df] Finished in 0.095 seconds with exit status 1 (failed).
+ DEBUG [073b90c3] Running [ -d /home/deploy/pawsup_backend/releases/20190822033507/public/assets ] as deploy@167.71.252.10
+ DEBUG [073b90c3] Command: [ -d /home/deploy/pawsup_backend/releases/20190822033507/public/assets ]
+ DEBUG [073b90c3] Finished in 0.090 seconds with exit status 1 (failed).
+  INFO [6be50ed0] Running /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/public/assets /home/deploy/pawsup_backend/releases/20190822033507/public/assets as deploy@167.71.252.10
+ DEBUG [6be50ed0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; /usr/bin/env ln -s /home/deploy/pawsup_backend/shared/public/assets /home/deploy/pawsup_backend/releases/20190822033507/public/assets )
+  INFO [6be50ed0] Finished in 0.090 seconds with exit status 0 (successful).
+ DEBUG [cbec378d] Running if test ! -d /home/deploy/pawsup_backend/releases/20190822033507; then echo "Directory does not exist '/home/deploy/pawsup_backend/releases/20190822033507'" 1>&2; false; fi as deploy@167.71.252.10
+ DEBUG [cbec378d] Command: if test ! -d /home/deploy/pawsup_backend/releases/20190822033507; then echo "Directory does not exist '/home/deploy/pawsup_backend/releases/20190822033507'" 1>&2; false; fi
+ DEBUG [cbec378d] Finished in 0.090 seconds with exit status 0 (successful).
+ DEBUG [11a71154] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deploy/pawsup_backend/shared/bundle as deploy@167.71.252.10
+ DEBUG [11a71154] Command: cd /home/deploy/pawsup_backend/releases/20190822033507 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deploy/pawsup_backend/shared/bundle )
+ DEBUG [11a71154] 	The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+ DEBUG [11a71154] 	The following gems are missing
+ DEBUG [11a71154] 	 * net-ssh (5.2.0)
+ DEBUG [11a71154] 	 * net-scp (2.0.0)
+ DEBUG [11a71154] 	 * sshkit (1.20.0)
+ DEBUG [11a71154] 	 * airbrussh (1.3.3)
+ DEBUG [11a71154] 	 * byebug (11.0.1)
+ DEBUG [11a71154] 	 * capistrano (3.11.0)
+ DEBUG [11a71154] 	 * capistrano-bundler (1.6.0)
+ DEBUG [11a71154] 	 * capistrano-passenger (0.2.0)
+ DEBUG [11a71154] 	 * capistrano-rails (1.4.0)
+ DEBUG [11a71154] 	 * capistrano-rbenv (2.1.4)
+ DEBUG [11a71154] 	 * ffi (1.10.0)
+ DEBUG [11a71154] 	 * rb-fsevent (0.10.3)
+ DEBUG [11a71154] 	 * rb-inotify (0.10.0)
+ DEBUG [11a71154] 	 * ruby_dep (1.5.0)
+ DEBUG [11a71154] 	 * listen (3.1.5)
+ DEBUG [11a71154] 	 * spring (2.0.2)
+ DEBUG [11a71154] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [11a71154] 	Install missing gems with `bundle install`
+ DEBUG [11a71154] Finished in 0.620 seconds with exit status 1 (failed).
+  INFO [edda2144] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deploy/pawsup_backend/shared/bundle --jobs 4 --without development test --deployment --quiet as deploy@167.71.252.10
+ DEBUG [edda2144] Command: cd /home/deploy/pawsup_backend/releases/20190822033507 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deploy/pawsup_backend/shared/bundle --jobs 4 --without development test --deployment --quiet )
+  INFO [edda2144] Finished in 0.866 seconds with exit status 0 (successful).
+ DEBUG [b1d45271] Running if test ! -d /home/deploy/pawsup_backend/releases/20190822033507; then echo "Directory does not exist '/home/deploy/pawsup_backend/releases/20190822033507'" 1>&2; false; fi as deploy@167.71.252.10
+ DEBUG [b1d45271] Command: if test ! -d /home/deploy/pawsup_backend/releases/20190822033507; then echo "Directory does not exist '/home/deploy/pawsup_backend/releases/20190822033507'" 1>&2; false; fi
+ DEBUG [b1d45271] Finished in 0.085 seconds with exit status 0 (successful).
+  INFO [8d77e8d9] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as deploy@167.71.252.10
+ DEBUG [8d77e8d9] Command: cd /home/deploy/pawsup_backend/releases/20190822033507 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.3" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+ DEBUG [8d77e8d9] 	rake aborted!
+ DEBUG [8d77e8d9] 	Don't know how to build task 'assets:precompile' (See the list of available tasks with `rake --tasks`)
+ DEBUG [8d77e8d9] 	/home/deploy/pawsup_backend/shared/bundle/ruby/2.6.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+/home/deploy/.rbenv/versions/2.6.3/bin/bundle:23:in `load'
+/home/deploy/.rbenv/versions/2.6.3/bin/bundle:23:in `<main>'
+ DEBUG [8d77e8d9] 	(See full trace by running task with --trace)
