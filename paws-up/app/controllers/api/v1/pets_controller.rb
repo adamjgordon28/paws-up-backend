@@ -7,6 +7,7 @@ class Api::V1::PetsController < ApplicationController
   end
 
   def show
+    # byebug
     @pet = Pet.find_by(id: pet_params[:id])
     render json: @pet
   end

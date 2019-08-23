@@ -5,8 +5,8 @@ Rails.application.routes.draw do
       resources :pets
       resources :adopters, only: [:create]
       resources :meetings
-      post '/login', to: 'auth#login' # sign in
-      get '/profile', to: 'adopters#profile' # profile!
+      post '/login', to: 'auth#login' 
+      get '/profile', to: 'adopters#profile'
     end
   end
 
